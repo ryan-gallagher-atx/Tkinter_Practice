@@ -12,85 +12,92 @@ root.title('Tic-Tac-Toe')
 clicked = True
 count = 0
 winner = False
+player = " "
+
+
+# disable all the buttons
+def disable_all_buttons():
+    """Disables all buttons after a win or after a stalemate."""
+    pass
 
 
 # Check to see if someone won
 def checkifwon():
     """Checks to see if a player has won."""
-    """Checks to see if a player has won."""
-    global winner
+    global winner, player
 
-    # disable all the buttons
-    def disable_all_buttons():
-        """Disables all buttons after a win or after a stalemate."""
-        pass
+    if clicked is True:
+        player = 'X'
+    else:
+        player = 'O'
 
     # horizontal wins
-    if b1["text"] == 'X' and b2["text"] == 'X' and b3["text"] == 'X':
+    if b1["text"] == player and b2["text"] == player and b3["text"] == player:
         b1.config(bg="green")
         b2.config(bg="green")
         b3.config(bg="green")
         winner = True
-        messagebox.showinfo("Tic-Tac-Toe", "Congratulations, X wins!")
+        messagebox.showinfo("Tic-Tac-Toe", "Congratulations!" + player + "wins!")
         disable_all_buttons()
 
-    elif b4["text"] == 'X' and b5["text"] == 'X' and b6["text"] == 'X':
+    elif b4["text"] == player and b5["text"] == player and b6["text"] == player:
         b1.config(bg="green")
         b2.config(bg="green")
         b3.config(bg="green")
         winner = True
-        messagebox.showinfo("Tic-Tac-Toe", "Congratulations, X wins!")
+        messagebox.showinfo("Tic-Tac-Toe", "Congratulations!" + player + "wins!")
         disable_all_buttons()
 
-    elif b7["text"] == 'X' and b8["text"] == 'X' and b9["text"] == 'X':
+    elif b7["text"] == player and b8["text"] == player and b9["text"] == player:
         b1.config(bg="green")
         b2.config(bg="green")
         b3.config(bg="green")
         winner = True
-        messagebox.showinfo("Tic-Tac-Toe", "Congratulations, X wins!")
+        messagebox.showinfo("Tic-Tac-Toe", "Congratulations!" + player + "wins!")
         disable_all_buttons()
 
     # vertical wins
-    elif b1["text"] == 'X' and b4["text"] == 'X' and b7["text"] == 'X':
+    elif b1["text"] == player and b4["text"] == player and b7["text"] == player:
         b1.config(bg="green")
         b4.config(bg="green")
         b7.config(bg="green")
         winner = True
-        messagebox.showinfo("Tic-Tac-Toe", "Congratulations, X wins!")
+        messagebox.showinfo("Tic-Tac-Toe", "Congratulations!" + player + "wins!")
         disable_all_buttons()
 
-    elif b2["text"] == 'X' and b5["text"] == 'X' and b8["text"] == 'X':
+    elif b2["text"] == player and b5["text"] == player and b8["text"] == player:
         b2.config(bg="green")
         b5.config(bg="green")
         b8.config(bg="green")
         winner = True
-        messagebox.showinfo("Tic-Tac-Toe", "Congratulations, X wins!")
+        messagebox.showinfo("Tic-Tac-Toe", "Congratulations!" + player + "wins!")
         disable_all_buttons()
 
-    elif b3["text"] == 'X' and b6["text"] == 'X' and b9["text"] == 'X':
+    elif b3["text"] == player and b6["text"] == player and b9["text"] == player:
         b3.config(bg="green")
         b6.config(bg="green")
         b9.config(bg="green")
         winner = True
-        messagebox.showinfo("Tic-Tac-Toe", "Congratulations, X wins!")
+        messagebox.showinfo("Tic-Tac-Toe", "Congratulations!" + player + "wins!")
         disable_all_buttons()
 
     # diagonal wins
-    elif b1["text"] == 'X' and b5["text"] == 'X' and b9["text"] == 'X':
+    elif b1["text"] == player and b5["text"] == player and b9["text"] == player:
         b1.config(bg="green")
         b5.config(bg="green")
         b9.config(bg="green")
         winner = True
-        messagebox.showinfo("Tic-Tac-Toe", "Congratulations, X wins!")
+        messagebox.showinfo("Tic-Tac-Toe", "Congratulations!" + player + "wins!")
         disable_all_buttons()
 
-    elif b3["text"] == 'X' and b5["text"] == 'X' and b7["text"] == 'X':
+    elif b3["text"] == player and b5["text"] == player and b7["text"] == player:
         b3.config(bg="green")
         b5.config(bg="green")
         b7.config(bg="green")
         winner = True
-        messagebox.showinfo("Tic-Tac-Toe", "Congratulations, X wins!")
+        messagebox.showinfo("Tic-Tac-Toe", "Congratulations!" + player + "wins!")
         disable_all_buttons()
+
 
 # Button clicked function
 def b_click(b):
