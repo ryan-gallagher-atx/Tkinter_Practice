@@ -1,6 +1,8 @@
 # Author: Ryan Gallagher
 # Date: 12/15/2021
 # Description: Following along with a tutorial to build tic tac toe.
+# Tutorial and most code copied from: Codemy.com
+# Youtube tutorial link: https://www.youtube.com/watch?v=xx0qmpuA-vM
 
 from tkinter import *
 from tkinter import messagebox
